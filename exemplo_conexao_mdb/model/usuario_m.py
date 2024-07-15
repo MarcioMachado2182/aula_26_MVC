@@ -56,9 +56,9 @@ class UsuarioModel:
         try:
             cursor.execute(f'''
             UPDATE usuarios 
-            SET nome=%s,idade=%s
-            WHERE id = {id}
-            ''')
+            SET nome = ?, idade = ? 
+            WHERE id = ?
+            ''',(nome, idade, id))
             print(f'atualizado')
             self.conn.commit()
         except mariadb.Error as e:
