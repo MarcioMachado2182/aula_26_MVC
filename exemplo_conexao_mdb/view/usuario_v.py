@@ -37,7 +37,7 @@ class UsuarioView(tk.Frame):
         return self.idade_entry.get()
 
     def adicionar_usuario_lista(self, usuario):
-        self.usuarios_listbox.insert(tk.END, f"{usuario[1]} ({usuario[2]} anos)")
+        self.usuarios_listbox.insert(tk.END, f"id {usuario[0]} | {usuario[1]} ({usuario[2]} anos)")
 
     def mostrar_aviso():
         messagebox.showinfo("Aviso", "Esta é uma mensagem de aviso!")
