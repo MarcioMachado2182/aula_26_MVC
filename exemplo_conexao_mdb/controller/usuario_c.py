@@ -3,6 +3,7 @@ from tkinter import ttk
 from model.usuario_m import UsuarioModel
 from view.usuario_v import UsuarioView
 
+
 class UsuarioController:
     def __init__(self, view:UsuarioView, model:UsuarioModel):
         self.view = view
@@ -23,6 +24,8 @@ class UsuarioController:
         usuarios = self.model.selecionar_usuarios()
         for usuario in usuarios:
             self.view.adicionar_usuario_lista(usuario)
+
+    
 
 if __name__ == "__main__":
     root = tk.Tk()
